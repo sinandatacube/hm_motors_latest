@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "553931152302",
+    "project_id": "hm-motors",
+    "storage_bucket": "hm-motors.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553931152302:android:12bca3cf4e75c820b4463f",
+        "android_client_info": {
+          "package_name": "com.datacubeinfo.hm_motors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553931152302-i43a3t1sqrg6a4omg46pe9quaej4noc4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRnqkRmhMWQ60r0rzF61KY2a3Nt6sBVRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553931152302-i43a3t1sqrg6a4omg46pe9quaej4noc4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
