@@ -39,8 +39,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     getUserNumber();
-    DynamicLinkHandler().initDynamicLinks();
-
+    DynamicLinkHandler().handleDynamicLink();
     controller = AutoScrollController(
         viewportBoundaryGetter: () =>
             Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom),

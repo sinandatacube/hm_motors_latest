@@ -8,6 +8,8 @@ import 'package:hm_motors/view/settings.dart';
 import 'package:hm_motors/view/wishlist.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
+import '../controller/dynamic_link_handler.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -25,6 +27,8 @@ class _HomeState extends State<Home> {
   ];
   @override
   Widget build(BuildContext context) {
+    // DynamicLinkHandler().initDynamicLinks();
+
     return WillPopScope(
         onWillPop: () async {
           if (isSkip) {

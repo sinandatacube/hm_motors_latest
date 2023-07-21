@@ -55,10 +55,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
-                    android:host="https://hmmotors.page.link/"
+                    android:host="https://hmmotors.page.link"
                     android:scheme="http" />
                 <data
-                    android:host="https://hmmotors.page.link/"
+                    android:host="https://hmmotors.page.link"
                     android:scheme="https" />
 
                 <!-- android:host="https://hmmotor.in/" /> -->

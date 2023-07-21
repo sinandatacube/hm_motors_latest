@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hm_motors/global_functions.dart';
@@ -11,6 +13,7 @@ import 'package:hm_motors/provider/emicalculator_provider.dart';
 import 'package:hm_motors/provider/homepage_provider.dart';
 import 'package:hm_motors/view/home.dart';
 import 'package:hm_motors/view/utitlities/error_page.dart';
+import 'package:hm_motors/view/vehicle_details%20copy.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
@@ -28,6 +31,7 @@ void main() async {
     //     messagingSenderId: "536472508718",
     //     projectId: "spencer-mobile-accessories")
   );
+
   HttpOverrides.global = MyHttpoverrides();
 
   packageInfo = await PackageInfo.fromPlatform();
@@ -146,4 +150,16 @@ setRoute() async {
           MaterialPageRoute(builder: (_) => const ErrorPage()));
     }
   });
+}
+
+handleDynamicLink() async {
+  // Get any initial links
+  final PendingDynamicLinkData? initialLink =
+      await FirebaseDynamicLinks.instance.getInitialLink();
+  if (initialLink != null) {
+    final Uri deepLink = initialLink.link;
+    log(deepLink.toString(), name: "deeplink");
+    // Example of using the dynamic link to push the user to a different screen
+    // navigatorKey.currentState?.push(MaterialPageRoute(builder: (_)=>VehicleDetails()));
+  }
 }

@@ -212,7 +212,9 @@ class _VehicleDetailsState extends State<VehicleDetails> {
                   child: GestureDetector(
                     onTap: () async {
                       String link = await DynamicLinkController()
-                          .createDynamicLink(data.id);
+                          .createDynamicLinkWithapi(data.id);
+
+                      // .createDynamicLink(data.id);
                       Share.share(link);
                     },
                     child: Container(
